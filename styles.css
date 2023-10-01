@@ -1,93 +1,357 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pixelify+Sans:wght@400;500;600&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat';
+/* Mobile responsiveness for screens with a max-width of 390px and max-height of 844px */
+@media only screen and (max-width: 390px) and (max-height: 844px) {
+    * {
+        margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat';
+    }
 
-}
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(#4a7dc4 55%, #638fcf 75%);
+        box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+    }
 
-body{
+    h1,
+    h2 {
+        margin-bottom: 30px; /* Adjusted margin for smaller screens */
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+        font-weight: 500;
+        text-align: center;
+        color: #000000;
+    }
 
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100vh;
-background: linear-gradient(#4a7dc4  55%, #638fcf 75%) ;
-box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
-}
+    form {
+        width: 90%; /* Adjusted width for smaller screens */
+        margin: 0 auto;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 20px; /* Adjusted padding for smaller screens */
+        border-radius: 1rem;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    }
 
-h1{
-    margin-bottom: 50px;
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-align: center;
-    color: #000000;
-}
+    label {
+        margin-bottom: 10px; /* Adjusted margin for smaller screens */
+        font-size: 12px; /* Adjusted font size for smaller screens */
+        font-weight: 800;
+    }
 
-h2 {
-    margin-bottom: 50px;
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-align: center;
-    color: #000000;
-}
+    textarea,
+    input,
+    select {
+        width: 100%;
+        padding: 8px; /* Adjusted padding for smaller screens */
+        font-size: 12px; /* Adjusted font size for smaller screens */
+        font-weight: 400;
+        border-radius: 6px;
+        margin-bottom: 10px; /* Adjusted margin for smaller screens */
+        border: 1px solid #999;
+    }
 
-form{
-   width: 500px;
-   margin: 0 auto;
-   background-color: #fff;
-   display: flex;
-   flex-direction: column;
-   padding: 30px 40px;
-   border-radius: 1rem;
-   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    .buttons {
+        display: flex;
+        gap: 8px; /* Adjusted gap for smaller screens */
+        margin-bottom: 10px; /* Adjusted margin for smaller screens */
+        margin-top: 5px; /* Adjusted margin for smaller screens */
+        text-align: center;
+        color: #1a92a180;
+        font-weight: 800;
+    }
 
-}
-
-label{
-margin-bottom: 12px;
-font-size: 14px;
-font-weight: 800;
-
-}
-
-textarea, input, select{
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    font-weight: 400;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    border: 1px solid #999;
-}
-
-.buttons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-    margin-top: 10px;
-    text-align: center;
-    color: #1a92a180;
-    font-weight: 800;
+    button {
+        padding: 8px; /* Adjusted padding for smaller screens */
+        font-size: 13px; /* Adjusted font size for smaller screens */
+    }
     
+
+
+  
+    #generatedWorkout {
+        font-size: 11px; /* Adjusted font size for smaller screens */
+        padding: 8px; /* Adjusted padding for smaller screens */
+        width: 100%;
+        min-height: 80px; /* Adjusted min-height for smaller screens */
+        font-family: 'Roboto';
+    }
+
+    #workoutHeader {
+        font-size: 11px; /* Adjusted font size for smaller screens */
+        padding: 8px; /* Adjusted padding for smaller screens */
+        margin-bottom: 5px; /* Adjusted margin for smaller screens */
+        font-weight: 500;
+        font-family: 'Montserrat';
+        display: none;
+        border: 0;
+    }
+
+    .show-border {
+        font-size: 16px; /* Adjusted font size for smaller screens */
+        min-height: 200px; /* Adjusted min-height for smaller screens */
+        padding: 20px; /* Adjusted padding for smaller screens */
+        font-weight: 500;
+        width: 350px; /* Adjusted width for smaller screens */
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 1.3rem;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+        border: 0;
+        text-align: center;
+        line-height: 2.5;
+    }
+
+    #workoutList {
+        border: 0;
+    }
+
+    select {
+        font-size: 11px; /* Adjusted font size for smaller screens */
+        margin-bottom: 5px; /* Adjusted margin for smaller screens */
+        font-weight: 500;
+        font-family: 'Montserrat';
+    }
+
+    #workoutHeader {
+        font-size: 1.5rem; /* Adjusted font size for smaller screens */
+        font-weight: 500;
+        text-align: center;
+    }
+
+    #refreshButton {
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 14px; /* Adjusted font size for smaller screens */
+        background-color: #cce3ff;
+        border-radius: 8px;
+        font: 'Montserrat';
+        color: #000000;
+        margin-top: 20px; /* Adjusted margin for smaller screens */
+    }
+
+    #generateButton:hover {
+      background-color: #c8c8ca;
+  }
+  
+  #refreshButton:hover {
+      background-color: #bfc0c2
+  }
+
+    .container ul {
+        list-style: none;
+    }
+
+    /* Adjustments to SVG and Text Styles */
+
+    svg {
+        height: 120%; /* Adjusted height for smaller screens */
+        height: 80vh; /* Adjusted height for smaller screens */
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-color: transparent;
+    }
+
+    .title {
+        position: relative;
+        left: -50%;
+        color: #fff;
+        text-align: center;
+        font-family: 'Lato';
+        letter-spacing: 3px; /* Adjusted letter-spacing for smaller screens */
+    }
+
+    .title-block {
+      position: absolute;
+      left: 50%;
+      top: 40%; /* Adjusted top position for smaller screens */
+      transform: translateX(-50%);
+  }
+  
+  #top .st48,
+  #top .st52 {
+      animation: drift-right-up 30s infinite alternate;
+  }
+  
+  #bottom .st11,
+  #bottom .st56 {
+      animation: drift-down 30s infinite alternate;
+  }
+  
+  #nearright .st40,
+  #nearright .st43 {
+      animation: drift-right 30s infinite alternate;
+  }
+  
+  #farright .st54,
+  #farright .st58 {
+      animation: drift-right 30s infinite alternate;
+  }
+  
+  @keyframes drift-right-up {
+      100% {
+          transform: translate(1200px, -120px); /* Adjusted translation values for smaller screens */
+      }
+  }
+  
+  @keyframes drift-down {
+      100% {
+          transform: translate(1200px, 600px); /* Adjusted translation values for smaller screens */
+      }
+  }
+  
+  @keyframes drift-right {
+      100% {
+          transform: translate(1200px, -10px); /* Adjusted translation values for smaller screens */
+      }
+  }
+  
 }
 
-button {
-    padding: 10px;
-    font-size: 15px;
-    width: auto; /* Adjusted width */
-    border: none;
-    background-color: #b1ccf3;
-    cursor: pointer;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 590;
-}
+@media only screen and (max-width: 1500px) and (max-height: 1000px)  { 
+  * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat';
+  }
 
-#generateButton:hover {
+  body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(#4a7dc4 55%, #638fcf 75%);
+      box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+  }
+
+  h1,
+  h2 {
+      margin-bottom: 30px; /* Adjusted margin for smaller screens */
+      font-size: 1.5rem; /* Adjusted font size for smaller screens */
+      font-weight: 500;
+      text-align: center;
+      color: #000000;
+  }
+
+  form {
+      width: 90%; /* Adjusted width for smaller screens */
+      margin: 0 auto;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 20px; /* Adjusted padding for smaller screens */
+      border-radius: 1rem;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  }
+
+  label {
+      margin-bottom: 10px; /* Adjusted margin for smaller screens */
+      font-size: 12px; /* Adjusted font size for smaller screens */
+      font-weight: 800;
+  }
+
+  textarea,
+  input,
+  select {
+      width: 100%;
+      padding: 8px; /* Adjusted padding for smaller screens */
+      font-size: 12px; /* Adjusted font size for smaller screens */
+      font-weight: 400;
+      border-radius: 6px;
+      margin-bottom: 10px; /* Adjusted margin for smaller screens */
+      border: 1px solid #999;
+  }
+
+  .buttons {
+      display: flex;
+      gap: 8px; /* Adjusted gap for smaller screens */
+      margin-bottom: 10px; /* Adjusted margin for smaller screens */
+      margin-top: 5px; /* Adjusted margin for smaller screens */
+      text-align: center;
+      color: #1a92a180;
+      font-weight: 800;
+  }
+
+  button {
+      padding: 8px; /* Adjusted padding for smaller screens */
+      font-size: 13px; /* Adjusted font size for smaller screens */
+      border-radius: 8px; /* Adjusted border-radius for smaller screens */
+  }
+
+  #generatedWorkout {
+      font-size: 11px; /* Adjusted font size for smaller screens */
+      padding: 8px; /* Adjusted padding for smaller screens */
+      width: 100%;
+      min-height: 80px; /* Adjusted min-height for smaller screens */
+      font-family: 'Roboto';
+  }
+
+  #workoutHeader {
+      font-size: 11px; /* Adjusted font size for smaller screens */
+      padding: 8px; /* Adjusted padding for smaller screens */
+      margin-bottom: 5px; /* Adjusted margin for smaller screens */
+      font-weight: 500;
+      font-family: 'Montserrat';
+      display: none;
+      border: 0;
+  }
+
+  .show-border {
+      font-size: 16px; /* Adjusted font size for smaller screens */
+      min-height: 200px; /* Adjusted min-height for smaller screens */
+      padding: 20px; /* Adjusted padding for smaller screens */
+      font-weight: 500;
+      background-color: #fff;
+      border-radius: 1.3rem;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+      border: 0;
+      text-align: center;
+      line-height: 2.5;
+  }
+
+  #workoutList {
+      border: 0;
+  }
+
+  select {
+      font-size: 11px; /* Adjusted font size for smaller screens */
+      margin-bottom: 5px; /* Adjusted margin for smaller screens */
+      font-weight: 500;
+      font-family: 'Montserrat';
+  }
+
+  #workoutHeader {
+      font-size: 1.5rem; /* Adjusted font size for smaller screens */
+      font-weight: 500;
+      text-align: center;
+  }
+
+  #refreshButton {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      font-size: 14px; /* Adjusted font size for smaller screens */
+      background-color: #cce3ff;
+      border-radius: 8px;
+      font: 'Montserrat';
+      color: #000000;
+      margin-top: 20px; /* Adjusted margin for smaller screens */
+  }
+
+  #generateButton:hover {
     background-color: #c8c8ca;
 }
 
@@ -95,153 +359,76 @@ button {
     background-color: #bfc0c2
 }
 
-select option[value="#"] {
-    display: none;
-}
-
-#generatedWorkout {
-    font-size: 13px;
-    padding: 10px;
-    width: 100%;
-    min-height: 100px;
-    font-family: 'Roboto';
-    
-}
-
-
-#workoutHeader {
-    font-size: 13px;
-    padding: 10px;
-    margin-bottom: 10px;
-    font-weight: 500;
-    font-family: 'Montserrat';
-    display: none;
-    border: 0;
-    
-}
-
-.show-border {
-    font-size: 20px;
-    min-height: 280px;
-    padding: 40px;
-    font-weight: 500; 
-    width: 500px;
-    background-color: #fff;
-    border-radius: 1.3rem;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-    border: 0; /* Initially set border to zero width */
-    text-align: center;
-    line-height: 2.8;
-    
-}
-
-
-
-
-
-#workoutList {
-
-    border: 0;
-
-}
-
-
-select {
-    font-size: 13px;
-    margin-bottom: 10px;
-    font-weight: 500;
-    font-family: 'Montserrat';
-
-}
-
-#workoutHeader {
-    font-size: 1.8rem;
-    font-weight: 500;
-    text-align: center;
-}
-
-#refreshButton {
-    display: block; /* Make it a block-level element to center with margin */
-    margin: 0 auto; /* Auto margin for centering horizontally */
-    padding: 10px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    background-color:  #cce3ff;
-    border-radius: 6px; /* Add border radius for rounded corners */
-    font: 'Montserrat';
-    color: #000000;
-    margin-top: 40px;
-    
-}
-
-.container ul {
-    list-style: none; /* Remove bullet points from the unordered list */
-}
-
-/* Adjustments to SVG and Text Styles */
-
-svg {
-    height: 180%;
-    height: 100vh;
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-color: transparent;
+  .container ul {
+      list-style: none;
   }
-  
+
+  /* Adjustments to SVG and Text Styles */
+
+  svg {
+      height: 120%; /* Adjusted height for smaller screens */
+      height: 80vh; /* Adjusted height for smaller screens */
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-color: transparent;
+  }
+
   .title {
-    position: relative;
-    left: -50%;
-    color: #fff;
-    text-align: center;
-    font-family: 'Lato';
-    letter-spacing: 5px;
+      position: relative;
+      left: -50%;
+      color: #fff;
+      text-align: center;
+      font-family: 'Lato';
+      letter-spacing: 3px; /* Adjusted letter-spacing for smaller screens */
   }
-  
+
   .title-block {
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 40%; /* Adjusted top position for smaller screens */
     transform: translateX(-50%);
-  }
-  
-  #top .st48,
-  #top .st52 {
+}
+
+#top .st48,
+#top .st52 {
     animation: drift-right-up 30s infinite alternate;
-  }
-  
-  #bottom .st11,
-  #bottom .st56 {
+}
+
+#bottom .st11,
+#bottom .st56 {
     animation: drift-down 30s infinite alternate;
-  }
-  
-  #nearright .st40,
-  #nearright .st43 {
+}
+
+#nearright .st40,
+#nearright .st43 {
     animation: drift-right 30s infinite alternate;
-  }
-  
-  #farright .st54,
-  #farright .st58 {
+}
+
+#farright .st54,
+#farright .st58 {
     animation: drift-right 30s infinite alternate;
-  }
-  
-  @keyframes drift-right-up {
+}
+
+@keyframes drift-right-up {
     100% {
-      transform: translate(2000px, -250px);
+        transform: translate(1200px, -120px); /* Adjusted translation values for smaller screens */
     }
-  }
-  
-  @keyframes drift-down {
+}
+
+@keyframes drift-down {
     100% {
-      transform: translate(2000px, 1220px);
+        transform: translate(1200px, 600px); /* Adjusted translation values for smaller screens */
     }
-  }
-  
-  @keyframes drift-right {
+}
+
+@keyframes drift-right {
     100% {
-      transform: translate(2000px, -20px);
+        transform: translate(1200px, -10px); /* Adjusted translation values for smaller screens */
     }
-  }
-  
+}
+
+}
