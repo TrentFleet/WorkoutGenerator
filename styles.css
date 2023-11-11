@@ -371,7 +371,11 @@ d{
 @media screen and (max-width: 800px) {
     
     *{
-        font-size: 20px;
+        font-size: 16px;
+    }
+
+    body{
+        margin: 0.5rem;
     }
 
     input[type="submit"]{
