@@ -203,7 +203,78 @@ d{
 }
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 450px) {
+    
+    *{
+        font-size: 12px;
+    }
+
+    input[type="submit"]{
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 20px; /* Adjust the font size of the labels */
+    }
+    
+
+    .nav_background{
+        background-color: rgb(217, 217, 217);
+        margin: 0.5rem;
+    }
+    
+    .nav_bar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1rem;
+    }
+
+    .name {
+        font-size: 8px;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero_form {
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+
+    .hero_form1,
+    .hero_form2,
+    .hero_form3 {
+        font-size: 18px;
+    }
+
+    .timer {
+        font-size: 12px;
+        margin: 2rem;
+    }
+
+    input[type="submit"] {
+        font-size: 12px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    #workoutResult {
+        margin: 1rem;
+        padding: 2rem;
+        font-size: 12px;
+        line-height: 1.5rem;
+    }
+
+    #workoutResult p {
+        font-size: 8px;
+    }
+
+    d {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 800px) {
     
     *{
         font-size: 12px;
