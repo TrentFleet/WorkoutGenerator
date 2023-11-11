@@ -198,7 +198,7 @@ label {
 /* Style for the workout result */
 #workoutResult {
     display: none; /* Initially hide the workout result */
-    padding: 5rem;
+    padding: 2rem;
     font-size: 16px;
     background-color: whitesmoke; /* Set background color to transparent initially */
     border-radius: 30px;
