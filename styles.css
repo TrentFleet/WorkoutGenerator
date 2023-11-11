@@ -1,434 +1,314 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pixelify+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Mobile responsiveness for screens with a max-width of 390px and max-height of 844px */
-@media only screen and (max-width: 390px) and (max-height: 844px) {
-    * {
-        margin: 0;
-        padding: 0;
-        outline: 0;
-        box-sizing: border-box;
-        font-family: 'Montserrat';
-    }
+* {
+    box-sizing: border-box;
+    border-radius: 10px;
+}
 
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background: linear-gradient(#4a7dc4 55%, #638fcf 75%);
-        box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
-    }
-
-    h1,
-    h2 {
-        margin-bottom: 30px; /* Adjusted margin for smaller screens */
-        font-size: 1.5rem; /* Adjusted font size for smaller screens */
-        font-weight: 500;
-        text-align: center;
-        color: #000000;
-    }
-
-    form {
-        width: 90%; /* Adjusted width for smaller screens */
-        margin: 0 auto;
-        background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        padding: 20px; /* Adjusted padding for smaller screens */
-        border-radius: 1rem;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-    }
-
-    label {
-        margin-bottom: 10px; /* Adjusted margin for smaller screens */
-        font-size: 12px; /* Adjusted font size for smaller screens */
-        font-weight: 800;
-    }
-
-    textarea,
-    input,
-    select {
-        width: 100%;
-        padding: 8px; /* Adjusted padding for smaller screens */
-        font-size: 12px; /* Adjusted font size for smaller screens */
-        font-weight: 400;
-        border-radius: 6px;
-        margin-bottom: 10px; /* Adjusted margin for smaller screens */
-        border: 1px solid #999;
-    }
-
-    .buttons {
-        display: flex;
-        gap: 8px; /* Adjusted gap for smaller screens */
-        margin-bottom: 10px; /* Adjusted margin for smaller screens */
-        margin-top: 5px; /* Adjusted margin for smaller screens */
-        text-align: center;
-        color: #1a92a180;
-        font-weight: 800;
-    }
-
-    button {
-        padding: 8px; /* Adjusted padding for smaller screens */
-        font-size: 13px; /* Adjusted font size for smaller screens */
-    }
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: rgb(242, 241, 241);
+    margin: 2rem;
+    font-size: 20px;
+    line-height: 2rem;
+    background-color: whitesmoke;
+    margin-bottom: 5rem;
     
-
-
-  
-    #generatedWorkout {
-        font-size: 11px; /* Adjusted font size for smaller screens */
-        padding: 8px; /* Adjusted padding for smaller screens */
-        width: 100%;
-        min-height: 80px; /* Adjusted min-height for smaller screens */
-        font-family: 'Roboto';
-    }
-
-    #workoutHeader {
-        font-size: 11px; /* Adjusted font size for smaller screens */
-        padding: 8px; /* Adjusted padding for smaller screens */
-        margin-bottom: 5px; /* Adjusted margin for smaller screens */
-        font-weight: 500;
-        font-family: 'Montserrat';
-        display: none;
-        border: 0;
-    }
-
-    .show-border {
-        font-size: 16px; /* Adjusted font size for smaller screens */
-        min-height: 200px; /* Adjusted min-height for smaller screens */
-        padding: 20px; /* Adjusted padding for smaller screens */
-        font-weight: 500;
-        width: 350px; /* Adjusted width for smaller screens */
-        margin: 0 auto;
-        background-color: #fff;
-        border-radius: 1.3rem;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-        border: 0;
-        text-align: center;
-        line-height: 2.5;
-    }
-
-    #workoutList {
-        border: 0;
-    }
-
-    select {
-        font-size: 11px; /* Adjusted font size for smaller screens */
-        margin-bottom: 5px; /* Adjusted margin for smaller screens */
-        font-weight: 500;
-        font-family: 'Montserrat';
-    }
-
-    #workoutHeader {
-        font-size: 1.5rem; /* Adjusted font size for smaller screens */
-        font-weight: 500;
-        text-align: center;
-    }
-
-    #refreshButton {
-        display: block;
-        margin: 0 auto;
-        padding: 10px;
-        font-size: 14px; /* Adjusted font size for smaller screens */
-        background-color: #cce3ff;
-        border-radius: 8px;
-        font: 'Montserrat';
-        color: #000000;
-        margin-top: 20px; /* Adjusted margin for smaller screens */
-    }
-
-    #generateButton:hover {
-      background-color: #c8c8ca;
-  }
-  
-  #refreshButton:hover {
-      background-color: #bfc0c2
-  }
-
-    .container ul {
-        list-style: none;
-    }
-
-    /* Adjustments to SVG and Text Styles */
-
-    svg {
-        height: 120%; /* Adjusted height for smaller screens */
-        height: 80vh; /* Adjusted height for smaller screens */
-        display: block;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        pointer-events: none;
-        background-color: transparent;
-    }
-
-    .title {
-        position: relative;
-        left: -50%;
-        color: #fff;
-        text-align: center;
-        font-family: 'Lato';
-        letter-spacing: 3px; /* Adjusted letter-spacing for smaller screens */
-    }
-
-    .title-block {
-      position: absolute;
-      left: 50%;
-      top: 40%; /* Adjusted top position for smaller screens */
-      transform: translateX(-50%);
-  }
-  
-  #top .st48,
-  #top .st52 {
-      animation: drift-right-up 30s infinite alternate;
-  }
-  
-  #bottom .st11,
-  #bottom .st56 {
-      animation: drift-down 30s infinite alternate;
-  }
-  
-  #nearright .st40,
-  #nearright .st43 {
-      animation: drift-right 30s infinite alternate;
-  }
-  
-  #farright .st54,
-  #farright .st58 {
-      animation: drift-right 30s infinite alternate;
-  }
-  
-  @keyframes drift-right-up {
-      100% {
-          transform: translate(1200px, -120px); /* Adjusted translation values for smaller screens */
-      }
-  }
-  
-  @keyframes drift-down {
-      100% {
-          transform: translate(1200px, 600px); /* Adjusted translation values for smaller screens */
-      }
-  }
-  
-  @keyframes drift-right {
-      100% {
-          transform: translate(1200px, -10px); /* Adjusted translation values for smaller screens */
-      }
-  }
-  
 }
 
-@media only screen and (max-width: 3000px) and (max-height: 2000px)  { 
-  * {
-      margin: 0;
-      padding: 0;
-      outline: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat';
-  }
 
-  body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: linear-gradient(#4a7dc4 55%, #638fcf 75%);
-      box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
-  }
 
-  h1,
-  h2 {
-      margin-bottom: 30px; /* Adjusted margin for smaller screens */
-      font-size: 1.5rem; /* Adjusted font size for smaller screens */
-      font-weight: 500;
-      text-align: center;
-      color: #000000;
-  }
-
-  form {
-      width: 90%; /* Adjusted width for smaller screens */
-      margin: 0 auto;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      padding: 20px; /* Adjusted padding for smaller screens */
-      border-radius: 1rem;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-  }
-
-  label {
-      margin-bottom: 10px; /* Adjusted margin for smaller screens */
-      font-size: 12px; /* Adjusted font size for smaller screens */
-      font-weight: 800;
-  }
-
-  textarea,
-  input,
-  select {
-      width: 100%;
-      padding: 8px; /* Adjusted padding for smaller screens */
-      font-size: 12px; /* Adjusted font size for smaller screens */
-      font-weight: 400;
-      border-radius: 6px;
-      margin-bottom: 10px; /* Adjusted margin for smaller screens */
-      border: 1px solid #999;
-  }
-
-  .buttons {
-      display: flex;
-      gap: 8px; /* Adjusted gap for smaller screens */
-      margin-bottom: 10px; /* Adjusted margin for smaller screens */
-      margin-top: 5px; /* Adjusted margin for smaller screens */
-      text-align: center;
-      color: #1a92a180;
-      font-weight: 800;
-  }
-
-  button {
-      padding: 8px; /* Adjusted padding for smaller screens */
-      font-size: 13px; /* Adjusted font size for smaller screens */
-      border-radius: 8px; /* Adjusted border-radius for smaller screens */
-  }
-
-  #generatedWorkout {
-      font-size: 11px; /* Adjusted font size for smaller screens */
-      padding: 8px; /* Adjusted padding for smaller screens */
-      width: 100%;
-      min-height: 80px; /* Adjusted min-height for smaller screens */
-      font-family: 'Roboto';
-  }
-
-  #workoutHeader {
-      font-size: 11px; /* Adjusted font size for smaller screens */
-      padding: 8px; /* Adjusted padding for smaller screens */
-      margin-bottom: 5px; /* Adjusted margin for smaller screens */
-      font-weight: 500;
-      font-family: 'Montserrat';
-      display: none;
-      border: 0;
-  }
-
-  .show-border {
-      font-size: 16px; /* Adjusted font size for smaller screens */
-      min-height: 200px; /* Adjusted min-height for smaller screens */
-      padding: 20px; /* Adjusted padding for smaller screens */
-      font-weight: 500;
-      background-color: #fff;
-      border-radius: 1.3rem;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-      border: 0;
-      text-align: center;
-      line-height: 2.5;
-  }
-
-  #workoutList {
-      border: 0;
-  }
-
-  select {
-      font-size: 11px; /* Adjusted font size for smaller screens */
-      margin-bottom: 5px; /* Adjusted margin for smaller screens */
-      font-weight: 500;
-      font-family: 'Montserrat';
-  }
-
-  #workoutHeader {
-      font-size: 1.5rem; /* Adjusted font size for smaller screens */
-      font-weight: 500;
-      text-align: center;
-  }
-
-  #refreshButton {
-      display: block;
-      margin: 0 auto;
-      padding: 10px;
-      font-size: 14px; /* Adjusted font size for smaller screens */
-      background-color: #cce3ff;
-      border-radius: 8px;
-      font: 'Montserrat';
-      color: #000000;
-      margin-top: 20px; /* Adjusted margin for smaller screens */
-  }
-
-  #generateButton:hover {
-    background-color: #c8c8ca;
+/* Add this style to your CSS */
+.hero_form input[type="text"] {
+    padding: 0.5rem; /* Adjust the value based on your preference */
+    font-size: 20px;
 }
 
-#refreshButton:hover {
-    background-color: #bfc0c2
+
+.nav_background{
+    background-color: rgb(217, 217, 217);
+    padding: 1rem;
+    margin: 0.5rem 15rem;
 }
 
-  .container ul {
-      list-style: none;
-  }
-
-  /* Adjustments to SVG and Text Styles */
-
-  svg {
-      height: 120%; /* Adjusted height for smaller screens */
-      height: 80vh; /* Adjusted height for smaller screens */
-      display: block;
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: -1;
-      pointer-events: none;
-      background-color: transparent;
-  }
-
-  .title {
-      position: relative;
-      left: -50%;
-      color: #fff;
-      text-align: center;
-      font-family: 'Lato';
-      letter-spacing: 3px; /* Adjusted letter-spacing for smaller screens */
-  }
-
-  .title-block {
-    position: absolute;
-    left: 50%;
-    top: 40%; /* Adjusted top position for smaller screens */
-    transform: translateX(-50%);
+.nav_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem;
 }
 
-#top .st48,
-#top .st52 {
-    animation: drift-right-up 30s infinite alternate;
+a{
+    color: black;
+    text-decoration: none;
+    transition: 0.3s ease-in;
 }
 
-#bottom .st11,
-#bottom .st56 {
-    animation: drift-down 30s infinite alternate;
+a:hover{
+    color: #45a049;
 }
 
-#nearright .st40,
-#nearright .st43 {
-    animation: drift-right 30s infinite alternate;
+li{
+    list-style: none;
 }
 
-#farright .st54,
-#farright .st58 {
-    animation: drift-right 30s infinite alternate;
+.nav_btn{
+    display: flex;
+    justify-content: center;
 }
 
-@keyframes drift-right-up {
-    100% {
-        transform: translate(1200px, -120px); /* Adjusted translation values for smaller screens */
+.refresh-btn{
+    background-color: #4caf50; /* Green background color */
+    color: white; /* White text color */
+    padding: 0.5rem;
+    margin: 1rem 0;
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    font-family: 'Poppins', sans-serif;
+}
+
+.refresh-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.name{
+    /* border: 1px solid blue; */
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.hero_form{
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(217, 217, 217);
+    margin: 1rem 15rem;
+    padding: 1rem;
+}
+
+.hero_form2{
+    margin: 1rem 0;
+}
+
+.hero_form3{
+    margin: 1rem 0;
+}
+
+
+
+.timer{
+    font-size: 4rem;
+    align-items: center;
+    /* border: 1px solid blue; */
+    color: #45a049;
+    margin: 4rem;
+}
+
+/* Add these styles to your CSS */
+input[type="submit"]{
+    background-color: #4caf50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 20px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style on hover */
+    margin-top: 2rem;
+    /* align-items: center; */
+    margin-left: 2rem;
+
+}
+
+/* Hover effect */
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Style for the time domain dropdown */
+.hero_form3 select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 2px solid #333;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Optional: Style for the label associated with the time domain dropdown */
+
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #333;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Style for checked checkboxes */
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background-color: #45a049;
+}
+
+/* Style for checked checkboxes */
+input[type="checkbox"]:checked {
+    background-color: #45a049;
+}
+
+/* Style for the labels associated with checkboxes and radio buttons */
+label {
+    font-size: 20px; /* Adjust the font size of the labels */
+}
+
+/* Style for the workout result */
+#workoutResult {
+    display: none; /* Initially hide the workout result */
+    margin: 2rem;
+    padding: 5rem;
+    font-size: 20px;
+    line-height: 3rem;
+    background-color: transparent; /* Set background color to transparent initially */
+    border-radius: 30px;
+    font-weight: 600;
+    border: #4caf50 solid 1rem;
+    text-align: center; /* Center the text inside the element */
+}
+
+
+/* Optional: Add styles for the workout result text */
+#workoutResult p {
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+d{
+    font-size: 22px;
+    color: #45a049;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+}
+
+/* Media query for screens with a maximum width of 395 pixels */
+@media screen and (max-width: 395px) {
+    body {
+        font-size: 8px; /* Adjusted font size for smaller screens */
     }
-}
 
-@keyframes drift-down {
-    100% {
-        transform: translate(1200px, 600px); /* Adjusted translation values for smaller screens */
+    .name {
+        /* Adjust font size and margin for smaller screens */
+        font-size: 8px;
+        margin-bottom: 0.5rem;
     }
-}
 
-@keyframes drift-right {
-    100% {
-        transform: translate(1200px, -10px); /* Adjusted translation values for smaller screens */
+    .hero_form {
+        /* Adjust padding for smaller screens */
+        padding: 0.5rem;
     }
+
+    .hero_form1, .hero_form2, .hero_form3 {
+        /* Adjust font size for smaller screens */
+        font-size: 8px;
+    }
+
+    /* Add more styles for other elements as needed */
 }
 
+
+@media only screen and (max-width: 550px) {
+    body {
+        margin: 1rem;
+        font-size: 12px;
+        line-height: 1.8rem;
+    }
+
+    .hero_form input[type="text"] {
+        font-size: 18px;
+    }
+
+    .nav_background {
+        margin: 0.5rem;
+    }
+
+    .nav_bar {
+        margin: 0.5rem;
+    }
+
+    .refresh-btn {
+        font-size: 16px;
+    }
+
+    .hero_form {
+        margin: 1rem;
+    }
+
+    .timer {
+        font-size: 3rem;
+        margin: 2rem;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    /* Add more styles for other elements as needed */
 }
+
+@media only screen and (max-width: 990px) {
+    body {
+        margin: 1.5rem;
+        font-size: 18px;
+        line-height: 1.8rem;
+    }
+
+    .hero_form input[type="text"] {
+        font-size: 18px;
+    }
+
+    .nav_background {
+        margin: 0.5rem;
+    }
+
+    .nav_bar {
+        margin: 0.5rem;
+    }
+
+    .refresh-btn {
+        font-size: 16px;
+    }
+
+    .hero_form {
+        margin: 1rem;
+    }
+
+    .timer {
+        font-size: 3rem;
+        margin: 2rem;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+        margin-left: 0;
+    }
+
+    /* Add more styles for other elements as needed */
+}
+
+
+
+
+
