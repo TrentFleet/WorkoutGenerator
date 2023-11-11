@@ -1,26 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
     let timerInterval;
-  
+
     // Function to update the timer display
     function updateTimerDisplay(seconds) {
-      const minutes = Math.floor(seconds / 60);
-      const remainingSeconds = seconds % 60;
-      const display = `${minutes < 10 ? "0" : ""}${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
-      document.getElementById("timer").innerText = display;
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        const display = `${minutes < 10 ? "0" : ""}${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
+        document.getElementById("timer").innerText = display;
     }
-  
-    // Function to start the timer
+
+    // Function to start the timer without countdown
     function startTimer(seconds) {
         // Check if the timer is already running
         if (timerInterval) {
             console.log("Timer is already running. Ignoring additional click.");
             return;
         }
-    
+
         timerInterval = setInterval(function () {
             updateTimerDisplay(seconds);
             seconds--;
-    
+
             if (seconds < 0) {
                 clearInterval(timerInterval);
                 document.getElementById("timer").innerText = "00:00";
@@ -28,36 +28,33 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }, 1000);
     }
-    
-  
+
     // Function to generate a random number between min and max (inclusive)
     function getRandomNumber(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-  
-// Function to handle refresh button click
-function handleRefreshButtonClick() {
-    // Clear stored workout data
-    localStorage.removeItem("workoutDetails");
-    localStorage.removeItem("remainingTime");
-  
-    // Stop the timer
-    clearInterval(timerInterval);
-    document.getElementById("timer").innerText = "00:00";
-  
-    // Clear the workout result
-    document.getElementById("workoutResult").innerHTML = "";
-  
-    // Reload the page to reset everything
-    window.location.reload();
-  }
-  
-  // Attach the refresh button click event listener
-  document.getElementById("refreshButton").addEventListener("click", handleRefreshButtonClick);
 
-  
-  
-  
+    // Function to handle refresh button click
+    function handleRefreshButtonClick() {
+        // Clear stored workout data
+        localStorage.removeItem("workoutDetails");
+        localStorage.removeItem("remainingTime");
+
+        // Stop the timer
+        clearInterval(timerInterval);
+        document.getElementById("timer").innerText = "00:00";
+
+        // Clear the workout result
+        document.getElementById("workoutResult").innerHTML = "";
+
+        // Reload the page to reset everything
+        window.location.reload();
+    }
+
+    // Attach the refresh button click event listener
+    document.getElementById("refreshButton").addEventListener("click", handleRefreshButtonClick);
+
+    // ...
       
 
     const workouts = {
@@ -285,14 +282,10 @@ document.getElementById("workoutForm").addEventListener("submit", handleSubmit);
 
   // Check if there is stored workout data
   const storedWorkoutDetails = localStorage.getItem("workoutDetails");
-  const storedRemainingTime = localStorage.getItem("remainingTime");
 
   if (storedWorkoutDetails && storedRemainingTime) {
     // Display the stored workout details
     document.getElementById("workoutResult").innerHTML = storedWorkoutDetails;
 
-    // Calculate the remaining time and start the timer
-    const remainingTime = Math.ceil(storedRemainingTime / 1000);
-    startTimer(remainingTime);
   }
 });
