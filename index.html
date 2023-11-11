@@ -3,65 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Workout Generator</title>
-    <link rel="stylesheet" href="styles.css">
-    
-
 </head>
 <body>
+    <div class="nav_background">
+    <div class="nav_bar">
+            <li>
+                <a href="#">Sign In</a>
+            </li>
+            <li>
+                <a href="#">Create Account</a>
+            </li>
+            <li>
+                <a href="#">Donate</a>
+            </li>
+    </div>
+    </div>
+    <div class="nav_btn">
+    <button class="refresh-btn" id="refreshButton">Refresh Page</button>
+    </div>  
+    <form class="hero_form" id="workoutForm" autocomplete="off">
+        <div class="name">
+        <label for="fname">Name:</label>
+        <input type="text" name="fname" id="fname"><br>
+        </div>
+            <!-- Activity selection -->
+            <div class="hero_form1">
+            <label><d>activity</d>:</label><br>
+            <input type="radio" id="bodybuilding" name="activity" value="Bodybuilding">
+            <label for="bodybuilding">Bodybuilding</label><br>
 
-   
-    <div class="container">
-        <h1>Personalised Workout Generator </h1>
-    <form id="workoutForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+            <input type="radio" id="crossfit" name="activity" value="Crossfit">
+            <label for="crossfit">Crossfit</label><br>
 
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-            <option value="#"></option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+            <input type="radio" id="powerlifting" name="activity" value="Powerlifting">
+            <label for="powerlifting">Powerlifting</label><br>
 
-        </select>
-
-        <label for="type">Type:</label>
-        <select id="type" name="type" required>
-            <option value="#"></option>
-            <option value="calisthenics">Calisthenics</option>
-            <option value="bodybuilding">Body Building</option>
-            <option value="crossfit">Crossfit</option>
-            <option value="hybrid">Hybrid</option>
-            <option value="endurance">Endurance</option>
-
-        </select>
-
-
-        <button id="generateButton" type="button" onclick="generateWorkout()">Generate Workout</button>
+            <input type="radio" id="Calisthenics " name="activity" value="Calisthenics">
+            <label for="powerlifting">Calisthenics</label><br>
         
+            <!-- Intensity selection -->
+            <div class="hero_form2">
+            <label><d>intensity:</d></label><br>
+            <input type="radio" id="relaxed" name="intensity" value="Relaxed">
+            <label for="relaxed">Low</label><br>
+            <input type="radio" id="medium" name="intensity" value="Medium">
+            <label for="medium">Medium</label><br>
+            <input type="radio" id="high" name="intensity" value="High">
+            <label for="high">High</label><br>
+        </div>
+        <div class="hero_form3">
+            <label><d>time domain:</d></label><br>
+            <select name="time_domain">
+                <option value="15">15 mins</option>
+                <option value="30">30 mins</option>
+                <option value="45">45 mins</option>
+                <option value="60">60 mins</option>
+            </select><br>
+        </div>
+        
+            <!-- Submit button -->
+            <div class="start">
+            <input type="submit" value="Start your Workout" onclick="startWorkout()"><br>
+        </div>
+            <div class="timer">
+            <div id="timer">00:00</div>
+        </div>
     </form>
 
-    <section id="generatedWorkout">
-    <div id="workoutContainer">
-       
+    <!-- Add this button after the form and before the workout result div -->
 
 
-    </div>
-    
+<div id="workoutResult"></div>
 
-    <h2 id="workoutHeader">Your Workout:</h2>
-    <ul id="workoutList">
-        <!-- Generated workout will be displayed here -->
-    </ul>
 
-    <button id="refreshButton" type="button" onclick="refreshPage()">Refresh</button>
+</div>
+<script src="../js/script.js"></script>
+</body>
 
-    
-    <script src="index.js">
-
-    
-    </script>
-    </body>
-    </html>
-    
+</html>
