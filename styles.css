@@ -174,17 +174,20 @@ input[type="radio"] {
     height: 16px;
     border-radius: 3px;
     cursor: pointer;
+    align-items: center;
 }
 
 /* Style for checked checkboxes */
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
     background-color: #45a049;
+    align-items: center;
 }
 
 /* Style for checked checkboxes */
 input[type="checkbox"]:checked {
     background-color: #45a049;
+    align-items: center;
 }
 
 /* Style for the labels associated with checkboxes and radio buttons */
@@ -196,7 +199,7 @@ label {
 #workoutResult {
     display: none; /* Initially hide the workout result */
     padding: 5rem;
-    font-size: 22px;
+    font-size: 16px;
     background-color: whitesmoke; /* Set background color to transparent initially */
     border-radius: 30px;
     /* font-weight: 600; */
