@@ -150,9 +150,6 @@ input[type="submit"]:hover {
     
 }
 
-.value{
-    color: black;
-}
 /* Optional: Style for the label associated with the time domain dropdown */
 
 
@@ -216,15 +213,13 @@ d{
 
 @media screen and (max-width: 350px) {
 
-    *{
-        font-size: 12px;
-    }
-    
-
-
     .hero_form input[type="text"] {
         padding: 0.5rem; /* Adjust the value based on your preference */
         font-size: 12px;
+    }
+    
+    *{
+        font-size: 16px;
     }
 
     input[type="submit"]{
@@ -271,7 +266,7 @@ d{
     }
 
     input[type="submit"] {
-        font-size: 18px;
+        font-size: 12px;
         margin-top: 1rem;
         margin-left: 1rem;
     }
@@ -290,19 +285,14 @@ d{
     d {
         font-size: 18px;
     }
-
-    .timer{
-        font-size: 4rem;
-        align-items: center;
-        /* border: 1px solid blue; */
-        color: #45a049;
-        margin: 4rem;
-    }
-
-
 }
 
 @media screen and (max-width: 500px) {
+    
+    *{
+        font-size: 16px;
+    }
+
     
 
     input[type="submit"]{
@@ -333,7 +323,6 @@ d{
         justify-content: center;
         gap: 2rem;
         margin: 1rem;
-        font-size: 16px;
     }
 
     .name {
@@ -364,7 +353,10 @@ d{
     }
 
     #workoutResult {
-        font-size: 1.4rem;
+        margin: 1rem;
+        padding: 2rem;
+        font-size: 12px;
+        line-height: 1.5rem;
     }
 
     #workoutResult p {
@@ -374,12 +366,13 @@ d{
     d {
         font-size: 18px;
     }
-
-    
 }
 
 @media screen and (max-width: 800px) {
     
+    *{
+        font-size: 20px;
+    }
 
     input[type="submit"]{
         font-size: 12px;
@@ -413,6 +406,11 @@ d{
         margin: 1rem;
     }
 
+    .hero_form1,
+    .hero_form2,
+    .hero_form3 {
+        font-size: 18px;
+    }
 
     .timer {
         font-size: 12px;
@@ -426,26 +424,19 @@ d{
     }
 
     #workoutResult {
-        font-size: 1.4rem;
-        
+        margin: 1rem;
+        padding: 2rem;
+        font-size: 12px;
+        line-height: 1.5rem;
     }
 
     #workoutResult p {
+        font-size: 8px;
+    }
+
+    d {
         font-size: 18px;
     }
-
-
-    .timer{
-        font-size: 4rem;
-        align-items: center;
-        /* border: 1px solid blue; */
-        color: #45a049;
-        margin: 4rem;
-    }
-
-
-
-
 }
 
 
