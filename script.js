@@ -214,7 +214,7 @@ function handleRefreshButtonClick() {
     // Create a string with the workout details
     let workoutDetails = `${name}'s Workout:<br>`;
     selectedExercises.forEach((exercise) => {
-      workoutDetails += `${exercise.name} - ${exercise.sets} sets of ${exercise.reps} reps<br>`;
+      workoutDetails += `${exercise.name} - ${exercise.sets} sets ${exercise.reps} reps<br>`;
     });
 
     // Display the generated workout in the HTML
@@ -266,12 +266,17 @@ function handleRefreshButtonClick() {
 
     // Generate and display the workout
     generateWorkout(name, activity, timeDomain, intensity);
+    
+
+    
 
     // Show the workout result and set the background color
     const workoutResult = document.getElementById("workoutResult");
     workoutResult.style.display = "block";
     workoutResult.style.backgroundColor = "whitesmoke"; // Set your desired background color here
 }
+
+
 
 // Attach the form submission event listener
 document.getElementById("workoutForm").addEventListener("submit", handleSubmit);
