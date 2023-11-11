@@ -4,6 +4,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     
+    
 }
 
 body {
@@ -16,6 +17,8 @@ body {
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    align-items: center;
+  
     
 }
 
@@ -32,7 +35,7 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin: 1rem;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -60,7 +63,7 @@ li{
     color: white; /* White text color */
     padding: 0.5rem;
     margin: 1rem 0;
-    font-size: 12px;
+    font-size: 14px;
     border: none; /* No border */
     border-radius: 10px; /* Rounded corners */
     cursor: pointer; /* Cursor style on hover */
@@ -76,7 +79,7 @@ li{
     align-items: center;
     justify-content: center;
     margin: 1rem 0;
-    font-size: 8px;
+    font-size: 14px;
 }
 
 
@@ -129,7 +132,7 @@ input[type="submit"]{
     background-color: #4caf50; /* Green background color */
     color: white; /* White text color */
     padding: 10px 20px; /* Padding around the text */
-    font-size: 12px; /* Font size */
+    font-size: 14px; /* Font size */
     border: none; /* No border */
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Cursor style on hover */
@@ -153,7 +156,7 @@ input[type="submit"]:hover {
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 14px;
     color: black;
     max-width: 60%;
     
@@ -162,19 +165,24 @@ input[type="submit"]:hover {
 
 /* Optional: Style for the label associated with the time domain dropdown */
 
+input[type="checkbox"]{
+    margin: 1rem;
 
 
-input[type="checkbox"],
+}
+
+
 input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    border: 2px solid #333;
+    border: 2px solid rgb(70, 70, 70);
     width: 1rem;
     height: 1rem;
-    border-radius: 1rem;
+    border-radius: 2px;
     cursor: pointer;
-    align-items: center;
+    /* display: flex; */
+    
 }
 
 /* Style for checked checkboxes */
@@ -192,15 +200,9 @@ input[type="checkbox"]:checked {
     /* align-items: center; */
 }
 
-/* Style for checked checkboxes */
-input[type="checkbox"]:checked {
-    background-color: #45a049;
-    align-items: center;
-}
-
 /* Style for the labels associated with checkboxes and radio buttons */
 label {
-    font-size: 8px; /* Adjust the font size of the labels */
+    font-size: 8px;
 }
 
 /* Style for the workout result */
@@ -231,6 +233,7 @@ d{
 }
 
 strong{
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 400;
+    /* border: 1px solid blue; */
 }
