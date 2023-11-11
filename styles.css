@@ -215,10 +215,12 @@ d{
 
 
 @media screen and (max-width: 350px) {
-    
+
     *{
-        font-size: 14px;
+        font-size: 12px;
     }
+    
+
 
     .hero_form input[type="text"] {
         padding: 0.5rem; /* Adjust the value based on your preference */
@@ -269,7 +271,7 @@ d{
     }
 
     input[type="submit"] {
-        font-size: 12px;
+        font-size: 18px;
         margin-top: 1rem;
         margin-left: 1rem;
     }
@@ -288,6 +290,16 @@ d{
     d {
         font-size: 18px;
     }
+
+    .timer{
+        font-size: 4rem;
+        align-items: center;
+        /* border: 1px solid blue; */
+        color: #45a049;
+        margin: 4rem;
+    }
+
+
 }
 
 @media screen and (max-width: 500px) {
@@ -352,10 +364,7 @@ d{
     }
 
     #workoutResult {
-        margin: 1rem;
-        padding: 2rem;
-        font-size: 12px;
-        line-height: 1.5rem;
+        font-size: 1.4rem;
     }
 
     #workoutResult p {
@@ -365,6 +374,8 @@ d{
     d {
         font-size: 18px;
     }
+
+    
 }
 
 @media screen and (max-width: 800px) {
@@ -415,19 +426,14 @@ d{
     }
 
     #workoutResult {
-        margin: 1rem;
-        padding: 2rem;
-        font-size: 12px;
-        line-height: 1.5rem;
+        font-size: 1.4rem;
+        
     }
 
     #workoutResult p {
-        font-size: 8px;
-    }
-
-    d {
         font-size: 18px;
     }
+
 
     .timer{
         font-size: 4rem;
