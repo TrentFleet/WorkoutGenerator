@@ -202,111 +202,78 @@ d{
     text-transform: uppercase;
 }
 
-/* Media query for screens with a maximum width of 395 pixels */
-@media screen and (max-width: 395px) {
-    body {
-        font-size: 8px; /* Adjusted font size for smaller screens */
+
+@media screen and (max-width: 390px) {
+    
+    *{
+        font-size: 12px;
+    }
+
+    input[type="submit"]{
+        font-size: 12px;
+    }
+
+    label {
+        font-size: 20px; /* Adjust the font size of the labels */
+    }
+    
+
+    .nav_background{
+        background-color: rgb(217, 217, 217);
+        margin: 0.5rem;
+    }
+    
+    .nav_bar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        margin: 1rem;
     }
 
     .name {
-        /* Adjust font size and margin for smaller screens */
         font-size: 8px;
         margin-bottom: 0.5rem;
     }
 
     .hero_form {
-        /* Adjust padding for smaller screens */
         padding: 0.5rem;
+        margin: 1rem;
     }
 
-    .hero_form1, .hero_form2, .hero_form3 {
-        /* Adjust font size for smaller screens */
+    .hero_form1,
+    .hero_form2,
+    .hero_form3 {
+        font-size: 18px;
+    }
+
+    .timer {
+        font-size: 12px;
+        margin: 2rem;
+    }
+
+    input[type="submit"] {
+        font-size: 12px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    #workoutResult {
+        margin: 1rem;
+        padding: 2rem;
+        font-size: 12px;
+        line-height: 1.5rem;
+    }
+
+    #workoutResult p {
         font-size: 8px;
     }
 
-    /* Add more styles for other elements as needed */
+    d {
+        font-size: 18px;
+    }
 }
 
-
-@media only screen and (max-width: 550px) {
-    body {
-        margin: 1rem;
-        font-size: 12px;
-        line-height: 1.8rem;
-    }
-
-    .hero_form input[type="text"] {
-        font-size: 18px;
-    }
-
-    .nav_background {
-        margin: 0.5rem;
-    }
-
-    .nav_bar {
-        margin: 0.5rem;
-    }
-
-    .refresh-btn {
-        font-size: 16px;
-    }
-
-    .hero_form {
-        margin: 1rem;
-    }
-
-    .timer {
-        font-size: 3rem;
-        margin: 2rem;
-    }
-
-    input[type="submit"] {
-        font-size: 18px;
-        margin-left: 0;
-    }
-
-    /* Add more styles for other elements as needed */
-}
-
-@media only screen and (max-width: 990px) {
-    body {
-        margin: 1.5rem;
-        font-size: 18px;
-        line-height: 1.8rem;
-    }
-
-    .hero_form input[type="text"] {
-        font-size: 18px;
-    }
-
-    .nav_background {
-        margin: 0.5rem;
-    }
-
-    .nav_bar {
-        margin: 0.5rem;
-    }
-
-    .refresh-btn {
-        font-size: 16px;
-    }
-
-    .hero_form {
-        margin: 1rem;
-    }
-
-    .timer {
-        font-size: 3rem;
-        margin: 2rem;
-    }
-
-    input[type="submit"] {
-        font-size: 18px;
-        margin-left: 0;
-    }
-
-    /* Add more styles for other elements as needed */
-}
 
 
 
