@@ -291,6 +291,19 @@ d{
     }
 }
 
+@media screen and (max-width: 390px) {
+
+    *{
+        font-size: 14px;
+    }
+
+    body{
+        margin: 0.5rem;
+    }
+
+
+}
+
 @media screen and (max-width: 500px) {
     
     *{
