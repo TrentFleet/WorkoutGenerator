@@ -98,6 +98,12 @@ li{
 
 .hero_form3{
     margin: 1rem 0;
+    font-size: 16px;
+}
+
+.hero_form3 select option {
+    color: black;
+    background-color: white; /* Set background color */
 }
 
 
@@ -140,8 +146,13 @@ input[type="submit"]:hover {
     border: 2px solid #333;
     border-radius: 3px;
     font-size: 16px;
+    color: black;
+    
 }
 
+.value{
+    color: black;
+}
 /* Optional: Style for the label associated with the time domain dropdown */
 
 
@@ -204,13 +215,13 @@ d{
 
 
 @media screen and (max-width: 350px) {
+    
+    *{
+        font-size: 14px;
+    }
 
     .hero_form input[type="text"] {
         padding: 0.5rem; /* Adjust the value based on your preference */
-        font-size: 12px;
-    }
-    
-    *{
         font-size: 12px;
     }
 
@@ -281,11 +292,6 @@ d{
 
 @media screen and (max-width: 500px) {
     
-    *{
-        font-size: 12px;
-    }
-
-    
 
     input[type="submit"]{
         font-size: 12px;
@@ -315,6 +321,7 @@ d{
         justify-content: center;
         gap: 2rem;
         margin: 1rem;
+        font-size: 16px;
     }
 
     .name {
@@ -362,9 +369,6 @@ d{
 
 @media screen and (max-width: 800px) {
     
-    *{
-        font-size: 12px;
-    }
 
     input[type="submit"]{
         font-size: 12px;
@@ -398,11 +402,6 @@ d{
         margin: 1rem;
     }
 
-    .hero_form1,
-    .hero_form2,
-    .hero_form3 {
-        font-size: 18px;
-    }
 
     .timer {
         font-size: 12px;
@@ -429,6 +428,18 @@ d{
     d {
         font-size: 18px;
     }
+
+    .timer{
+        font-size: 4rem;
+        align-items: center;
+        /* border: 1px solid blue; */
+        color: #45a049;
+        margin: 4rem;
+    }
+
+
+
+
 }
 
 
