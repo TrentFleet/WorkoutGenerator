@@ -23,61 +23,62 @@
     </div>
     <div class="nav_btn">
     <button class="refresh-btn" id="refreshButton">Refresh Page</button>
-    </div>  
+    </div>
+      
     <form class="hero_form" id="workoutForm" autocomplete="off">
         <div class="name">
-        <label for="fname">Name:</label>
-        <input type="text" name="fname" id="fname"><br>
+        <label for="fname"><strong><d>Name:</d></strong></label>
+        <input type="text" name="fname" id="fname">
         </div>
             <!-- Activity selection -->
             <div class="hero_form1">
-            <label><d>activity</d>:</label><br>
+            <label><d>activity:</d></label><br>
             <input type="radio" id="bodybuilding" name="activity" value="Bodybuilding">
-            <label for="bodybuilding">Bodybuilding</label><br>
+            <label for="bodybuilding"><strong>Bodybuilding</strong></label><br>
 
             <input type="radio" id="crossfit" name="activity" value="Crossfit">
-            <label for="crossfit">Crossfit</label><br>
+            <label for="crossfit"><strong>Crossfit</strong></label><br>
 
             <input type="radio" id="powerlifting" name="activity" value="Powerlifting">
-            <label for="powerlifting">Powerlifting</label><br>
+            <label for="powerlifting"><strong>Powerlifting</strong></label><br>
 
             <input type="radio" id="Calisthenics " name="activity" value="Calisthenics">
-            <label for="powerlifting">Calisthenics</label><br>
+            <label for="powerlifting"><strong>Calisthenics</strong></label><br>
         
             <!-- Intensity selection -->
             <div class="hero_form2">
             <label><d>intensity:</d></label><br>
             <input type="radio" id="relaxed" name="intensity" value="Relaxed">
-            <label for="relaxed">Low</label><br>
+            <label for="relaxed"><strong>Low</strong></label><br>
             <input type="radio" id="medium" name="intensity" value="Medium">
-            <label for="medium">Medium</label><br>
+            <label for="medium"><strong>Medium</strong></label><br>
             <input type="radio" id="high" name="intensity" value="High">
-            <label for="high">High</label><br>
+            <label for="high"><strong>High</strong></label><br>
         </div>
         <div class="hero_form3">
             <label><d>time domain:</d></label><br>
             <select name="time_domain">
-                <option value="15"><d>15 mins</d></option>
-                <option value="30"><d>30 mins</d></option>
-                <option value="45"><d>45 mins</d></option>
-                <option value="60"><d>60 mins</d></option>
+                <option value="15">15 mins</option>
+                <option value="30">30 mins</option>
+                <option value="45">45 mins</option>
+                <option value="60">60 mins</option>
             </select><br>
         </div>
         
             <!-- Submit button -->
             <div class="start">
             <input type="submit" value="Start your Workout" onclick="startWorkout()"><br>
-        </div>
-            <div class="timer">
-            <div id="timer">00:00</div>
-        </div>
+
     </form>
 
     <!-- Add this button after the form and before the workout result div -->
 
 
 <div id="workoutResult"></div>
-
+</div>
+<div class="timer">
+<div id="timer">00:00</div>
+</div>
 
 </div>
 <script src="script.js"></script>
