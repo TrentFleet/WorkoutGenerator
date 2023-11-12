@@ -34,7 +34,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    margin: 1rem;
+    margin: 1rem 2rem ;
     font-size: 14px;
     font-weight: 600;
 }
